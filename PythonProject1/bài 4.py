@@ -1,0 +1,2 @@
+print ("nhập n")
+
