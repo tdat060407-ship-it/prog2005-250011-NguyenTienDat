@@ -164,6 +164,50 @@ d = Dog("Độ mixi")
 print("Tên con chó:", d.name)
 d.sound()
 
+#10
+class SinhVien:
+    def __init__(self, diem):
+        self.diem = diem
+
+    # Nạp chồng toán tử ==
+    def __eq__(self, other):
+        return self.diem == other.diem
+
+
+# Tạo đối tượng
+sv1 = SinhVien(8)
+sv2 = SinhVien(8)
+sv3 = SinhVien(7)
+
+# So sánh
+print(sv1 == sv2)  # True
+print(sv1 == sv3)  # False
+
+#11
+class SinhVien:
+    count = 0   # biến lớp
+
+    def __init__(self, diem):
+        self.diem = diem
+        SinhVien.count += 1
+
+    @classmethod
+    def dem_so_sinh_vien(cls):
+        return cls.count
+
+
+# Tạo đối tượng
+sv1 = SinhVien(8)
+sv2 = SinhVien(7)
+sv3 = SinhVien(9)
+
+# In số sinh viên
+print("Số đối tượng SinhVien được tạo:", SinhVien.dem_so_sinh_vien())
+
+
+
+
+
 
 
 
